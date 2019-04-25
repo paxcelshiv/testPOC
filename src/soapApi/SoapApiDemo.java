@@ -15,6 +15,7 @@ import com.eviware.soapui.model.testsuite.TestRunner.Status;
 import com.eviware.soapui.support.SoapUIException;
 
 public class SoapApiDemo {
+	@Test
 	public static void runScript() throws XmlException, IOException, SoapUIException {
 		WsdlProject project=new WsdlProject("C:\\Users\\g522830\\Documents\\NumberConversion-soapui-project.xml");
 		WsdlTestSuite suite=project.getTestSuiteByName("TestSuite12");
@@ -27,11 +28,11 @@ public class SoapApiDemo {
 			Assert.assertEquals(Status.FINISHED.toString(), runner.getStatus().toString());
 		}
 	}
-
+/*
 	public static void main(String[] args) throws XmlException, IOException, SoapUIException {
 		runScript();
 		// TODO Auto-generated method stub
 
-	}
+	}*/
 
 }
